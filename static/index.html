@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Analysis</title>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Stock Analysis</h2>
+            <div class="input-section">
+                <h3>New Analysis</h3>
+                <input type="text" id="symbol" placeholder="Stock Symbol (e.g., AAPL)">
+                <input type="date" id="purchase-date">
+                <button onclick="showChart()">Show Chart</button>
+            </div>
+            <div class="db-section">
+                <h3>From Database</h3>
+                <select id="db-entries"></select>
+                <button onclick="showDbChart()">Show Chart</button>
+            </div>
+            <div class="stock-info">
+                <h3>Stock Information</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Company:</label>
+                        <span id="company-name">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Sector:</label>
+                        <span id="sector">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Industry:</label>
+                        <span id="industry">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Market Cap:</label>
+                        <span id="market-cap">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>P/E Ratio:</label>
+                        <span id="pe-ratio">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Dividend Yield:</label>
+                        <span id="dividend-yield">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>52W High:</label>
+                        <span id="52w-high">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>52W Low:</label>
+                        <span id="52w-low">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Avg Volume:</label>
+                        <span id="avg-volume">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div id="chart-container"></div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html> 
